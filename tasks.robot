@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation     Template robot main suite.
-Library           RPA.Browser.Selenium    #auto_close=${TRUE}
+Library           RPA.Browser.Selenium    auto_close=${FALSE}
 
 *** Tasks ***
 Download and process online data
@@ -10,7 +10,7 @@ Download and process online data
 
 *** Keywords ***
 Open the corona worldometer website
-    Open Available Browser    https://www.worldometers.info/coronavirus/
+    Open User Browser    https://www.worldometers.info/coronavirus/
 
 Download the countries table
     # ${sales_results_html}=    Get Element Attribute    id:main_table_countries_today    outerHTML
