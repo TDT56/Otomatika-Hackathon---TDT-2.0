@@ -7,8 +7,7 @@ browser = Selenium()
 
 def open_the_website(url):
 
-    browser.open_available_browser(url)
-    browser.click_link('USA')
+    browser.open_chrome_browser(url)
 
 def main():
     try:
