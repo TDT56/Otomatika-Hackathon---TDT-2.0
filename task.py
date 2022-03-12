@@ -5,13 +5,16 @@ from RPA.Browser.Selenium import Selenium
 
 browser = Selenium()
 
-def open_the_website(url):
+def open_worldometers_website():
+    browser.open_chrome_browser("https://www.worldometers.info/coronavirus/")
 
-    browser.open_chrome_browser(url)
+def click_USA():
+    browser.click_link('USA')
 
 def main():
     try:
-        open_the_website("https://www.worldometers.info/coronavirus/")
+        open_worldometers_website()
+        click_USA()
     finally:
         browser.close_all_browsers()
 
